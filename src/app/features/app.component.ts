@@ -7,11 +7,17 @@ import { RandomQuoteService } from '../services/random-quote.service'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- 
+  dataToDisplay: any = []; 
   constructor(private randomQuote: RandomQuoteService){}
-  title = 'Random Quote Generator !!';
+
+  ngOnInit() {
+
+  }
 
   getData () {
-    return this.randomQuote.getQuote()
+    this.randomQuote.getQuote().subscribe(data => {
+       this.dataToDisplay = data;
+       console.log(this.dataToDisplay);
+    });
   }
 }
