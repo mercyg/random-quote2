@@ -2,11 +2,12 @@
 This project is a practice for angular 2 for generating random quote 
 
 ## To test the app 
-you to install angular cli
+you need to install Angular CLI
 
 
 - git clone
-- cd into the folder and npm install 
+- cd into the folder 
+- npm install 
 - ng serve
 
 
