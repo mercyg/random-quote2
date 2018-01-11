@@ -17,7 +17,6 @@ export class AppComponent {
   getData () {
     this.randomQuote.getQuote().subscribe(data => {
        this.dataToDisplay = data;
-       console.log(this.dataToDisplay);
     });
   }
 }
