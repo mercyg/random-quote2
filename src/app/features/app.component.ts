@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RandomQuoteService } from '../services/random-quote.service'
+import { Quotes } from '../model/quotes';
 
 @Component({
   selector: 'app-root',
@@ -7,16 +8,15 @@ import { RandomQuoteService } from '../services/random-quote.service'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  dataToDisplay: any = []; 
   constructor(private randomQuote: RandomQuoteService){}
-
+  quotes = { }
   ngOnInit() {
-
   }
 
   getData () {
-    this.randomQuote.getQuote().subscribe(data => {
-       this.dataToDisplay = data;
+    this.randomQuote.getQuote().subscribe((data : any[]) => {
+       this.quotes = data;
+       console.log(this.quotes)
     });
   }
 }

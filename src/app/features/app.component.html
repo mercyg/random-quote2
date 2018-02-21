@@ -1,9 +1,10 @@
 <div style="text-align:center">
-  <h1>
-    <button (click)="getData()">Click me </button>
-   <div>{{dataToDisplay.quoteText}}</div>
-   <div>{{dataToDisplay.quoteAuthor}}</div>
-   <div>{{dataToDisplay.quoteLink}}</div>
-  </h1>
+  <div>
+    <button (click)="getData()">Random Quotes </button>
+    </div>
+    <div>
+   <blockquote>  {{quotes.quoteText}}</blockquote>
+   <p>By {{quotes.quoteAuthor}}</p>
+   </div>
 </div>
 
